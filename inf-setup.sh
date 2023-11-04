@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Function to set a static IP
 set_static_ip() {
     local iface="$1"
@@ -17,8 +16,22 @@ set_dhcp() {
     echo "Interface $iface is now using DHCP."
 }
 
+# ASCII Art and Authorship
+print_ascii_art() {
+    echo "__________                  __  ___________        ___________"
+    echo "\______   \  ____    ____ _/  |_\_   _____/___  ___\_   _____/"
+    echo " |       _/ /  _ \  /  _ \\   __\|    __)_ \  \/  / |    __)_ "
+    echo " |    |   \(  <_> )(  <_> )|  |  |        \ >    <  |        \\"
+    echo " |____|_  / \____/  \____/ |__| /_______  //__/\_ \/_______  /"
+    echo "        \/                              \/       \/        \/"
+    echo ""
+    echo "# Author: Ross Brereton (https://www.linkedin.com/in/ross-b-673872107/)"
+    echo "# Website: https://github.com/msf-Root-ExE"
+}
+
 # Menu
 while true; do
+    print_ascii_art
     echo "1. Set static IP"
     echo "2. Use DHCP"
     echo "3. Exit"
